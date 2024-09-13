@@ -20,7 +20,7 @@ public class FileService {
         try {
             Path copyLocation = Paths.get(uploadDir + File.separator + StringUtils.cleanPath(file.getOriginalFilename()));
             Files.copy(file.getInputStream(), copyLocation, StandardCopyOption.REPLACE_EXISTING);
-            
+
             String fileName = file.getOriginalFilename();
             int filelength = file.getBytes().length;
             System.out.println("File uploaded successfully, " + "file name is :: "+ fileName + "and length is ::" + filelength);
